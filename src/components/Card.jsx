@@ -20,7 +20,7 @@ function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="p-5">
-      <Card className="shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer" style={{ width: "17rem" }}>
+      <Card className="shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer hover:z-[10px]" style={{ width: "17rem" }}>
         <Card.Img variant="top" src={pfp} />
         <Card.Body className="bg-[#DBE2EF]">
           <Card.Title className="font-bold font-serif text-3xl w-full">
