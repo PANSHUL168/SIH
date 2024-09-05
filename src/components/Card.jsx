@@ -17,11 +17,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 // </div>
 
 function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
-  const [isVisible,setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="p-5">
-      <Card className="shadow-lg" style={{ width: "22rem" }}>
-          <Card.Img variant="top" src={pfp} />
+      <Card className="shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer" style={{ width: "17rem" }}>
+        <Card.Img variant="top" src={pfp} />
         <Card.Body className="bg-[#DBE2EF]">
           <Card.Title className="font-bold font-serif text-3xl w-full">
             {name}
@@ -29,26 +29,34 @@ function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
           {isVisible && (
             <Card.Text className="w-full text-md">{about}</Card.Text>
           )}
-          <h2 onClick={() => setIsVisible(!isVisible)} className="cursor-pointer text-sm">
-            {isVisible ? 'Close' : 'Read More...'}
+          <h2
+            onClick={() => setIsVisible(!isVisible)}
+            className="cursor-pointer text-sm"
+          >
+            {isVisible ? "Close" : "Read More..."}
           </h2>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item className="font-medium">
-            {almaMater}
-          </ListGroup.Item>
+          <ListGroup.Item className="font-medium text-nowrap">{almaMater}</ListGroup.Item>
           <ListGroup.Item>
-            <div className="flex gap-2">
-            {tags.map((tag,index) => (
-              <p key={index} className="text-xs border rounded-3xl p-1.5 bg-slate-600 text-white px-2.5">{tag}</p>
-            ))}
+            <div className="flex gap-2 overflow-x-scroll overflow-y-hidden scrollbar-none">
+              {tags.map((tag, index) => (
+                <p
+                  key={index}
+                  className="text-xs rounded-3xl p-1.5 bg-slate-600 text-nowrap text-white px-1.5 flex justify-center items-center"
+                >
+                  {tag}
+                </p>
+              ))}
             </div>
           </ListGroup.Item>
           <ListGroup.Item>{email}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <button className="bg-[#112D4e] text-white border rounded-md p-1.5">
-            <Card.Link href="#" className="font-bold">Connect+</Card.Link>
+            <Card.Link href="#" className="font-bold">
+              Connect+
+            </Card.Link>
           </button>
           {/* <Card.Link href="#">Another Link</Card.Link> */}
         </Card.Body>
@@ -58,3 +66,4 @@ function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
 }
 
 export default KitchenSinkExample;
+
