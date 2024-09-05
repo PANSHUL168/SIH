@@ -4,49 +4,66 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { CgProfile } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 
 function NavbarBoot() {
+  const navigate = useNavigate();
+
   return (
-      <Navbar expand="lg" className="bg-blue-500">
-        <Container fluid>
-          <Navbar.Brand className="text-white" href="#">
-            Aluminati
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link>
-            </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <nav className="flex items-center justify-between p-4 fixed w-full top-0 bg-[#03173e]">
+      <div className="logo text-3xl font-mono font-bold text-white                  ">Aluminati</div>
+      <div className="links">
+        <ul className="flex text-white gap-5">
+          <li
+            onClick={() => {
+              navigate("/directory");
+            }}
+            className="cursor-pointer font-mono text-xl hover:scale-110"
+          >
+            Directory
+          </li>
+          <li
+            onClick={() => {
+              navigate("/forum");
+            }}
+            className="cursor-pointer font-mono text-xl hover:scale-110"
+          >
+            Forum
+          </li>
+          <li
+            onClick={() => {
+              navigate("/event");
+            }}
+            className="cursor-pointer font-mono text-xl hover:scale-110"
+          >
+            Event
+          </li>
+          <li
+            onClick={() => {
+              navigate("/job");
+            }}
+            className="cursor-pointer font-mono text-xl hover:scale-110"
+          >
+            Jobs
+          </li>
+          <li
+            onClick={() => {
+              navigate("/donation");
+            }}
+            className="cursor-pointer font-mono text-xl hover:scale-110"
+          >
+            Donation
+          </li>
+        </ul>
+      </div>
+      <div className="profile flex gap-3 items-center">
+        <div className="profile-pic h-[35px] w-[35px] ">
+          <CgProfile className="text-white h-full w-full" />
+        </div>
+        <h1 className="font-bold text-white font-mono text-xl">Hi, John</h1>
+      </div>
+    </nav>
   );
 }
 

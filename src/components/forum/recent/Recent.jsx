@@ -2,7 +2,7 @@ import React from "react";
 
 const Recent = () => {
   return (
-    <div className="recent fixed top-[80px] right-5 w-[350px] h-[80vh] bg-[#112D4e]  py-4 px-3 rounded-xl">
+    <div className="recent fixed top-[95px] right-5 w-[350px] h-[80vh] bg-[#112D4e]  py-4 px-3 rounded-xl">
       <div className="headings flex justify-between">
         <p className="text-lg font-semibold text-gray-300">Recents</p>
         <button className="bg-blue-500 rounded-2xl px-2">Clear</button>
