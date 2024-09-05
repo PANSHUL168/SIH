@@ -62,17 +62,18 @@ const accounts = [
 const DirectoryC = () => {
   return <div className="p-10 container">
     <h1 className="text-center font-bold text-3xl">Directory</h1>
-
-    {/* <h2>Search</h2> */}
-    {/* <input type="text" placeholder="Search by name..." />
-    <input type="text" placeholder="Search by email..." />
-    <input type="text" placeholder="Search by phone..." /> */}
+    <br />
+    <div className="flex justify-center items-center space-x-4">
+    <input type="text" placeholder="Search by name..." className="border border-solid border-black"/>
+    <input type="text" placeholder="Search by email..." className="border border-solid border-black"/>
+    <input type="text" placeholder="Search by phone..." className="border border-solid border-black"/>
+    </div>
 
     {/* <h2>Sort</h2>
     <button>Sort by Name</button>
     <button>Sort by Email</button> */}
 
-    <div className="p-[5rem] grid grid-cols-3">
+    <div className="p-[1rem] grid grid-cols-3">
       {accounts.map((account) => (
         <KitchenSinkExample key={account.id} pfp={account.pfp} about={account.about} name={account.name} almaMater={account.almaMater} phone={account.phone} email={account.email} />
       ))}

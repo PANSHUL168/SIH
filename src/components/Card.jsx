@@ -18,15 +18,15 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function KitchenSinkExample({ pfp, about, name, almaMater, phone, email }) {
   return (
-    <div className="bg-red-600 p-5">
-      <Card style={{ width: "18rem" }}>
+    <div className="p-5 scroll-">
+      <Card className="shadow-lg" style={{ width: "22rem" }}>
         <Card.Img variant="top" src={pfp} />
         <Card.Body>
-          <Card.Title className="">{name}</Card.Title>
-          <Card.Text>{about}</Card.Text>
+          <Card.Title className="font-bold font-serif text-3xl">{name}</Card.Title>
+          <Card.Text className=" w-auto text-lg">{about}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item>{almaMater}</ListGroup.Item>
+          <ListGroup.Item className="bg-blue-300 font-medium">{almaMater}</ListGroup.Item>
           <ListGroup.Item>{phone}</ListGroup.Item>
           <ListGroup.Item>{email}</ListGroup.Item>
         </ListGroup>
