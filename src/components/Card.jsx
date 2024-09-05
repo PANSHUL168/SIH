@@ -18,11 +18,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function KitchenSinkExample({ pfp, about, name, almaMater, phone, email }) {
   return (
-    <div className="bg-red-600 p-5 grid-cols-3">
+    <div className="bg-red-600 p-5">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={pfp} />
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
+          <Card.Title className="">{name}</Card.Title>
           <Card.Text>{about}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
