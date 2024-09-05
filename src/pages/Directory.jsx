@@ -1,5 +1,6 @@
 import React from 'react'
-import DirectoryC from '../components/DirectoryC'
+import DirectoryC from '../components/directory/DirectoryC'
+
 
 const Directory = () => {
   return (
