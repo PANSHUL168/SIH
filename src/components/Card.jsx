@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 // <div className='flex shadow-lg border-solid items-center mt-4 justify-between bg-red-500 p-5'>
@@ -16,23 +16,41 @@ import ListGroup from "react-bootstrap/ListGroup";
 //     </div>
 // </div>
 
-function KitchenSinkExample({ pfp, about, name, almaMater, phone, email }) {
+function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
+  const [isVisible,setIsVisible] = useState(false);
   return (
-    <div className="p-5 scroll-">
+    <div className="p-5">
       <Card className="shadow-lg" style={{ width: "22rem" }}>
-        <Card.Img variant="top" src={pfp} />
-        <Card.Body>
-          <Card.Title className="font-bold font-serif text-3xl">{name}</Card.Title>
-          <Card.Text className=" w-auto text-lg">{about}</Card.Text>
+          <Card.Img variant="top" src={pfp} />
+        <Card.Body className="bg-[#DBE2EF]">
+          <Card.Title className="font-bold font-serif text-3xl w-full">
+            {name}
+          </Card.Title>
+          {isVisible && (
+            <Card.Text className="w-full text-md">{about}</Card.Text>
+          )}
+          <h2 onClick={() => setIsVisible(!isVisible)} className="cursor-pointer text-sm">
+            {isVisible ? 'Close' : 'Read More...'}
+          </h2>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item className="bg-blue-300 font-medium">{almaMater}</ListGroup.Item>
-          <ListGroup.Item>{phone}</ListGroup.Item>
+          <ListGroup.Item className="font-medium">
+            {almaMater}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <div className="flex gap-2">
+            {tags.map((tag,index) => (
+              <p key={index} className="text-xs border rounded-3xl p-1.5 bg-slate-600 text-white px-2.5">{tag}</p>
+            ))}
+            </div>
+          </ListGroup.Item>
           <ListGroup.Item>{email}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <button className="bg-[#112D4e] text-white border rounded-md p-1.5">
+            <Card.Link href="#" className="font-bold">Connect+</Card.Link>
+          </button>
+          {/* <Card.Link href="#">Another Link</Card.Link> */}
         </Card.Body>
       </Card>
     </div>
