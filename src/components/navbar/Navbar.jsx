@@ -11,7 +11,7 @@ function NavbarBoot() {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex items-center justify-between p-4 fixed w-full top-0 bg-[#03173e]">
+    <nav className="flex z-50 items-center justify-between p-4 fixed w-full top-0 bg-[#03173e]">
       <div className="logo text-3xl font-mono font-bold text-white                  ">Aluminati</div>
       <div className="links">
         <ul className="flex text-white gap-5">

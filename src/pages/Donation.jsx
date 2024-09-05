@@ -45,7 +45,7 @@ const Donation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-400 p-8">
+    <div className="min-h-screen mt-[82px] bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-400 p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left Column - Donation Form */}
         <div className="bg-white p-8 rounded-xl shadow-xl flex flex-col justify-between md:col-span-1">
