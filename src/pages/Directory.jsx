@@ -1,8 +1,11 @@
 import React from 'react'
+import DirectoryC from '../components/DirectoryC'
 
 const Directory = () => {
   return (
-    <div>Directory</div>
+    <div>
+      <DirectoryC />
+    </div>
   )
 }
 
