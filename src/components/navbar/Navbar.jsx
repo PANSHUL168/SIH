@@ -18,6 +18,7 @@ function NavbarBoot() {
           <li
             onClick={() => {
               navigate("/directory");
+              window.scrollTo(0,0)
             }}
             className="cursor-pointer font-mono text-xl hover:scale-110"
           >
@@ -26,6 +27,7 @@ function NavbarBoot() {
           <li
             onClick={() => {
               navigate("/forum");
+              window.scrollTo(0,0)
             }}
             className="cursor-pointer font-mono text-xl hover:scale-110"
           >
@@ -34,6 +36,7 @@ function NavbarBoot() {
           <li
             onClick={() => {
               navigate("/event");
+              window.scrollTo(0,0)
             }}
             className="cursor-pointer font-mono text-xl hover:scale-110"
           >
@@ -42,6 +45,7 @@ function NavbarBoot() {
           <li
             onClick={() => {
               navigate("/job");
+              window.scrollTo(0,0)
             }}
             className="cursor-pointer font-mono text-xl hover:scale-110"
           >
@@ -50,6 +54,7 @@ function NavbarBoot() {
           <li
             onClick={() => {
               navigate("/donation");
+              window.scrollTo(0,0)
             }}
             className="cursor-pointer font-mono text-xl hover:scale-110"
           >
