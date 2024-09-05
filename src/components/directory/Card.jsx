@@ -15,9 +15,13 @@ import ListGroup from "react-bootstrap/ListGroup";
 //         </div>
 //     </div>
 // </div>
-
+import { FaLinkedin } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"
+ 
 function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
+  
   return (
     <div className="p-5">
       <Card className="shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer hover:z-[10px]" style={{ width: "17rem" }}>
@@ -52,13 +56,15 @@ function KitchenSinkExample({ pfp, about, name, almaMater, tags, email }) {
           </ListGroup.Item>
           <ListGroup.Item>{email}</ListGroup.Item>
         </ListGroup>
-        <Card.Body>
+        <Card.Body className="flex justify-between">
           <button className="bg-[#112D4e] text-white border rounded-md p-1.5">
             <Card.Link href="#" className="font-bold">
               Connect+
             </Card.Link>
           </button>
-          {/* <Card.Link href="#">Another Link</Card.Link> */}
+          <a href="https://in.linkedin.com">
+            <FaLinkedin className="size-6" />
+          </a>
         </Card.Body>
       </Card>
     </div>
