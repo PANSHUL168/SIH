@@ -7,6 +7,7 @@ import Forum from "./pages/Forum.jsx";
 import Directory from "./pages/Directory";
 import Donation from "./pages/Donation";
 import Jobs from "./pages/Jobs";
+import Events from "./pages/Events.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import NavbarBoot from "./components/navbar/Navbar.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/donation" element={<Donation />} />
         <Route path="/job" element={<Jobs />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/event" element={<Events />} />
       </Routes>
     </>
   );
