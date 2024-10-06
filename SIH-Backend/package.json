@@ -1,0 +1,19 @@
+{
+  "name": "sih-backend",
+  "version": "1.0.0",
+  "description": "aluminati-backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "chai"
+  ],
+  "author": "manjeet",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}
